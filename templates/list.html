@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Random
+{% endblock title %}
+
+{% block content %}
+
+<div class="row">
+    <a class="col s2 offset-s5 btn waves-effect waves-red" href="/add">Добавить
+        <i class="small material-icons" style="font-size: 15px;">android</i>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col s4 offset-s4 ">
+        <ul class="collection with-header">
+            <li class="center-align collection-header">
+                <h4>Tasks</h4>
+            </li>
+            {% for task in tasks %}     
+                <li class="collection-item">{{ task }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
